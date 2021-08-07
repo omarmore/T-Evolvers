@@ -8,13 +8,15 @@ import { HeaderComponent } from './pages/components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioComponent } from './pages/components/recovered/formulario/formulario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './pages/components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecoveredComponent,
     HeaderComponent,
-    FormularioComponent
+    FormularioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
