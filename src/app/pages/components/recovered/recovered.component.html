@@ -1,0 +1,32 @@
+<app-formulario [recovered] =recovered (reporteador)="asignar()"></app-formulario>
+<br>
+<div class="card">
+    <div class="card-header">
+      Datos
+
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Age</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let dato of datos$|async'>
+                  <th scope="row">{{dato.id}}</th>
+                  <td>{{dato.name}}</td>
+                  <td>{{dato.age}}</td>
+                  <td>
+                    <button type="button" class="btn btn-primary" (click)="editar(dato)">Editar</button>
+                    <button type="button" class="btn btn-danger" (click)="delete(dato.id)">Eliminar</button>
+
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+    </div>
+  </div>
